@@ -13,6 +13,11 @@ body {
     line-height: 1.5;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 .star-hero {
     background-color: gold;
     width: 2.5em;
@@ -47,10 +52,40 @@ li {
 
 main {
     display: flex;
+    justify-content: space-between;
     margin-inline: 4.5rem;
     gap: 2em;
 }
 
 .left {
     max-width: 50%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4em;
+}
+
+.card {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 3px 3px 40px -2px rgba(0, 0, 0, 0.18);
+    max-width: 25rem;
+}
+
+.card-2 {
+    margin-left: -100%;
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.card img {
+    max-width: 5em;
 }
