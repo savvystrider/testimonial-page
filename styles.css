@@ -10,7 +10,7 @@ body {
     display: grid;
     min-height: 100vh;
     place-items: center;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 img {
@@ -54,7 +54,7 @@ main {
     display: flex;
     justify-content: space-between;
     margin-inline: 4.5rem;
-    gap: 2em;
+    gap: 3em;
 }
 
 .left {
@@ -62,22 +62,30 @@ main {
 }
 
 .right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 4em;
+    display: grid;
+    grid-template-columns: repeat(3, 15.625rem);
+    grid-template-rows: auto;
+    row-gap: 2em;
+    max-width: 40%;
 }
 
 .card {
     background-color: #fff;
-    padding: 1em;
+    padding: 1em 2em;
     border-radius: 1em;
     box-shadow: 3px 3px 40px -2px rgba(0, 0, 0, 0.18);
-    max-width: 25rem;
+    min-width: 25rem;
+    max-height: 16rem;
+}
+
+.card-1 {
+    grid-column: 2 / 3;
+    grid-row-start: 1;
 }
 
 .card-2 {
-    margin-left: -100%;
+    grid-column: 1 / 2;
+    grid-row-start: 2;
 }
 
 .card-top {
@@ -88,4 +96,21 @@ main {
 
 .card img {
     max-width: 5em;
+}
+
+@media screen and (max-width: 60rem) {
+    main {
+        flex-direction: column;
+        margin-inline: 1.5rem;
+        padding-block: 1em;
+    }
+
+    .left {
+        max-width: 55%;
+    }
+
+    .card {
+        min-width: 20rem;
+    }
+
 }
